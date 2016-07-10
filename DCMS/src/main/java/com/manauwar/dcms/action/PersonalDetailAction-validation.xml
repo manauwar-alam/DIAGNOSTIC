@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE validators PUBLIC '-//OpenSymphony Group//XWork Validator 1.0.2//EN'
+'http://www.opensymphony.com/xwork/xwork-validator-1.0.2.dtd'>
+
+<validators>
+    <field name="perDet.nameOfCandidate">
+        <field-validator type="requiredstring">
+            <param name="trim">true</param>
+            <message>Please enter Name of Candidate</message>
+        </field-validator>
+    </field>
+
+   <field name="perDet.referenceNo">
+        <field-validator type="requiredstring">
+            <param name="trim">true</param>
+            <message>Please enter Ref No.</message>
+        </field-validator>
+    </field>
+ 
+     <field name="perDet.passportNo" >
+        <field-validator type="requiredstring" >
+            <param name="trim">true</param>
+            <message>Please enter Passport Number</message>
+        </field-validator>
+        
+    </field>
+  
+    <field name="perDet.placeOfIssue">
+       <field-validator type="requiredstring" >
+            <param name="trim">true</param>
+            <message>Please enter Place of Issue</message>
+        </field-validator>
+    </field>
+  
+    <field name="perDet.dateOfIssue">
+        <field-validator type="required" >
+            <message>Please enter Date of Issue</message>
+        </field-validator>
+        <field-validator type="date">
+            <message>Please enter valid Date</message>
+        </field-validator>
+    </field>
+ 
+    <field name="perDet.postAppliedFor">
+        <field-validator type="requiredstring">
+            <param name="trim">true</param>
+            <message>Please enter Post applied for</message>
+        </field-validator>
+    </field>
+
+    <field name="perDet.weight">
+        <field-validator type="requiredstring">
+            <param name="trim">true</param>
+            <message>Please enter weight in kg.</message>
+        </field-validator>
+    </field>
+
+    <field name="perDet.height">
+        
+        <field-validator type="requiredstring">
+            <param name="trim">true</param>
+            <message>Please enter height in cm</message>
+        </field-validator>
+    </field>
+
+   <field name="perDet.maritalStatus">
+        <field-validator type="required">
+            <message>Please select Marital Status</message>
+        </field-validator>
+    </field>
+
+    <field name="perDet.sex">
+        <field-validator type="required">
+            <message>Please select sex</message>
+        </field-validator>
+    </field>
+
+    <field name="perDet.nationality">
+        <field-validator type="requiredstring">
+            <param name="trim">true</param>
+            <message>Please enter Nationality</message>
+        </field-validator>
+    </field>
+
+    <field name="perDet.dateOfBirth">
+        <field-validator type="required">
+            <message>Please enter Date of Birth</message>
+        </field-validator>
+        <field-validator type="date">
+            <message>Please enter valid Date</message>
+        </field-validator>
+    </field>
+
+     <field name="perDet.ageInYears">
+        <field-validator type="required" short-circuit="true">
+            <message>Please enter your Age in years</message>
+        </field-validator>
+        <field-validator type="int">
+            <param name="min">1</param>
+            <param name="max">100</param>
+            <message>Please enter your Age between 1 and 100 in numeric</message>
+        </field-validator>
+    </field>
+    
+    
+   <field name="perDet.examDate">
+        <field-validator type="required">
+            <message>Please enter Exam Date</message>
+        </field-validator>
+        <field-validator type="date">
+            <message>Please enter valid Date</message>
+        </field-validator>
+    </field>
+   
+    <field name="perDet.commonRemarks">
+        <field-validator type="requiredstring">
+             <param name="trim">true</param>
+            <message>Please enter Remarks</message>
+        </field-validator>
+    </field>
+    <field name="perDet.commonResult">
+        <field-validator type="requiredstring">
+             <param name="trim">true</param>
+            <message>Please enter Result</message>
+        </field-validator>
+    </field>                
+    <!--                        -->
+    
+</validators>

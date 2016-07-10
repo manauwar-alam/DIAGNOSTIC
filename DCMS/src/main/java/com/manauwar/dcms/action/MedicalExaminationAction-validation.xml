@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE validators PUBLIC '-//OpenSymphony Group//XWork Validator 1.0.2//EN'
+'http://www.opensymphony.com/xwork/xwork-validator-1.0.2.dtd'>
+
+<validators>
+    <field name="medEx.visionRightEye">
+        <field-validator type="requiredstring">
+            <param name="trim">true</param>
+            <message>Please enter vision Right Eye field value</message>
+        </field-validator>
+    </field>
+    
+    <field name="medEx.visionLeftEye">
+        <field-validator type="requiredstring">
+            <param name="trim">true</param>
+            <message>Please enter vision Right Eye field value</message>
+        </field-validator>
+    </field>
+    <field name="medEx.otherRightEye">
+        <field-validator type="requiredstring">
+            <param name="trim">true</param>
+            <message>Please enter othter Right Eye field value</message>
+        </field-validator>
+    </field>
+    
+    <field name="medEx.otherLeftEye">
+        <field-validator type="requiredstring">
+            <param name="trim">true</param>
+            <message>Please enter other Left Eye field value</message>
+        </field-validator>
+    </field>
+    
+    <field name="medEx.rightEar">
+        <field-validator type="requiredstring">
+            <param name="trim">true</param>
+            <message>Please enter Right Ear field value</message>
+        </field-validator>
+    </field>
+    
+    <field name="medEx.leftEar">
+        <field-validator type="requiredstring">
+            <param name="trim">true</param>
+            <message>Please enter Left Ear field value</message>
+        </field-validator>
+    </field>
+    
+    <field name="medEx.hernia">
+        <field-validator type="requiredstring">
+            <param name="trim">true</param>
+            <message>Please enter Hernia field value</message>
+        </field-validator>
+    </field>
+    
+    <field name="medEx.varicoseVeins">
+        <field-validator type="requiredstring">
+            <param name="trim">true</param>
+            <message>Please enter Varicose Veins field value</message>
+        </field-validator>
+    </field>
+    
+    <field name="medEx.extremeties">
+        <field-validator type="requiredstring">
+            <param name="trim">true</param>
+            <message>Please enter extremities field value</message>
+        </field-validator>
+    </field>
+    
+    <field name="medEx.skin">
+        <field-validator type="requiredstring">
+            <param name="trim">true</param>
+            <message>Please enter Skin field value</message>
+        </field-validator>
+    </field>
+    
+    <field name="medEx.hydrocele">
+        <field-validator type="requiredstring">
+            <param name="trim">true</param>
+            <message>Please enter Hydrocele field value</message>
+        </field-validator>
+    </field>
+    
+    <field name="medEx.bloodPressure">
+        <field-validator type="requiredstring">
+            <param name="trim">true</param>
+            <message>Please enter Blood Pressure field value</message>
+        </field-validator>
+    </field>
+    
+    <field name="medEx.heart">
+        <field-validator type="requiredstring">
+            <param name="trim">true</param>
+            <message>Please enter Heart field value</message>
+        </field-validator>
+    </field>
+    
+    <field name="medEx.lungs">
+        <field-validator type="requiredstring">
+            <param name="trim">true</param>
+            <message>Please enter Lungs field value</message>
+        </field-validator>
+    </field>
+    
+    <field name="medEx.abdomen">
+        <field-validator type="requiredstring">
+            <param name="trim">true</param>
+            <message>Please enter Abdomen field value</message>
+        </field-validator>
+    </field>
+    
+    <field name="medEx.vrdl">
+        <field-validator type="requiredstring">
+            <param name="trim">true</param>
+            <message>Please enter VRDL field value</message>
+        </field-validator>
+    </field>
+    
+    <field name="medEx.tpha">
+        <field-validator type="requiredstring">
+            <param name="trim">true</param>
+            <message>Please enter TPHA field value</message>
+        </field-validator>
+    </field>
+    
+   
+  
+</validators>

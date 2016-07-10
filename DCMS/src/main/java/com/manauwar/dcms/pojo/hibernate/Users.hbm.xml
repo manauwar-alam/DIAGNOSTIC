@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 16 Apr, 2014 12:57:57 PM by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+    <class name="com.manauwar.dcms.pojo.hibernate.Users" table="users" catalog="lifecare">
+        <id name="usersId" type="java.lang.Integer">
+            <column name="UsersId" />
+            <generator class="identity" />
+        </id>
+        <property name="userName" type="string">
+            <column name="UserName" length="30" not-null="true" />
+        </property>
+        <property name="fullName" type="string">
+            <column name="FullName" length="100" not-null="true" />
+        </property>
+        <property name="password" type="string">
+            <column name="Password" length="45" not-null="true" />
+        </property>
+        <set name="personalDetails" inverse="true">
+            <key>
+                <column name="FK_UserId" not-null="true" />
+            </key>
+            <one-to-many class="com.manauwar.dcms.pojo.hibernate.PersonalDetail" />
+        </set>
+    </class>
+</hibernate-mapping>

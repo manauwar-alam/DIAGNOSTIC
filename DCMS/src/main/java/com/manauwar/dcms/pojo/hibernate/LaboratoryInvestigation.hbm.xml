@@ -1,0 +1,84 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 16 Apr, 2014 12:57:57 PM by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+    <class name="com.manauwar.dcms.pojo.hibernate.LaboratoryInvestigation" table="laboratory_investigation" catalog="lifecare">
+        <id name="laboratoryInvestigationId" type="java.lang.Integer">
+            <column name="LaboratoryInvestigationId" />
+            <generator class="identity" />
+        </id>
+        <many-to-one name="personalDetail" class="com.manauwar.dcms.pojo.hibernate.PersonalDetail" fetch="select">
+            <column name="FK_PersonalDetailId" not-null="true" />
+        </many-to-one>
+        <property name="urineSugar" type="string">
+            <column name="Urine_Sugar" length="30" not-null="true" />
+        </property>
+        <property name="urineAlbumn" type="string">
+            <column name="Urine_Albumn" length="30" not-null="true" />
+        </property>
+        <property name="urineBilharziasis" type="string">
+            <column name="Urine_Bilharziasis" length="30" not-null="true" />
+        </property>
+        <property name="urineOthers" type="string">
+            <column name="Urine_Others" length="30" not-null="true" />
+        </property>
+        <property name="stoolHelminthes" type="string">
+            <column name="Stool_Helminthes" length="30" not-null="true" />
+        </property>
+        <property name="stoolBilharziasis" type="string">
+            <column name="Stool_Bilharziasis" length="30" not-null="true" />
+        </property>
+        <property name="stoolSalmonela" type="string">
+            <column name="Stool_Salmonela" length="30" not-null="true" />
+        </property>
+        <property name="stoolShigella" type="string">
+            <column name="Stool_Shigella" length="30" not-null="true" />
+        </property>
+        <property name="stoolVcholera" type="string">
+            <column name="Stool_VCholera" length="30" not-null="true" />
+        </property>
+        <property name="stoolOthers" type="string">
+            <column name="Stool_Others" length="30" not-null="true" />
+        </property>
+        <property name="bloodHemoglobin" type="string">
+            <column name="Blood_Hemoglobin" length="30" not-null="true" />
+        </property>
+        <property name="bloodMalariaFilm" type="string">
+            <column name="Blood_MalariaFilm" length="30" not-null="true" />
+        </property>
+        <property name="serologyHiv" type="string">
+            <column name="Serology_Hiv" length="30" not-null="true" />
+        </property>
+        <property name="serologyHbag" type="string">
+            <column name="Serology_HBAg" length="30" not-null="true" />
+        </property>
+        <property name="serologyAntiHcv" type="string">
+            <column name="Serology_AntiHCV" length="30" not-null="true" />
+        </property>
+        <property name="serologyLft" type="string">
+            <column name="Serology_LFT" length="30" not-null="true" />
+        </property>
+        <property name="serologyUrea" type="string">
+            <column name="Serology_Urea" length="30" not-null="true" />
+        </property>
+        <property name="serologyCreatinine" type="string">
+            <column name="Serology_Creatinine" length="30" not-null="true" />
+        </property>
+        <property name="serologyBloodSugarR" type="string">
+            <column name="Serology_BloodSugarR" length="30" not-null="true" />
+        </property>
+        <property name="serologyBloodGroup" type="string">
+            <column name="Serology_BloodGroup" length="30" not-null="true" />
+        </property>
+        <property name="pregnencyTest" type="char">
+            <column name="PregnencyTest" length="1" not-null="true" />
+        </property>
+        <property name="lmpdate" type="date">
+            <column name="LMPDate" length="10" not-null="true" />
+        </property>
+        <property name="chestXray" type="string">
+            <column name="ChestXRay" length="30" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

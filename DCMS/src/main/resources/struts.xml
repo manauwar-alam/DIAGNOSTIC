@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+		"-//Apache Software Foundation//DTD Struts Configuration 2.5//EN"
+		"http://struts.apache.org/dtds/struts-2.5.dtd">
+<struts>
+ 
+    <package name="action" namespace="/" extends="struts-default">
+        
+        <interceptors>
+    <interceptor name="authentication"
+        class="com.manauwar.dcms.utils.AuthenticationInterceptor">
+    </interceptor>
+    <interceptor-stack name="authStack">
+        <interceptor-ref name="authentication" />
+        <interceptor-ref name="defaultStack" />
+    </interceptor-stack>
+    
+</interceptors>
+        
+       <global-results>
+            <result name="loginRedirect" type="redirect">IndexAction.action</result>
+        </global-results>
+        <action name="IndexAction" class="com.manauwar.dcms.action.LoginAction">
+            <result name="success">/pages/Login.jsp</result>
+        </action>
+         <action name="LoginAction" class="com.manauwar.dcms.action.LoginAction" method="login">
+            <result name="SUCCESS1">/pages/MainPage.jsp</result>
+            <result name="SUCCESS2">/pages/Login.jsp</result>
+            <result name="error">/pages/Error.jsp</result>
+        </action> 
+        
+        
+        <action name="NewEntry" class="com.manauwar.dcms.action.MainAction" method="createNewEntry">
+            <interceptor-ref name="authStack"></interceptor-ref>
+            <result name="success">/pages/PersonalDetail.jsp</result>
+            <result name="error">/pages/Error.jsp</result>
+        </action> 
+        <action name="SearchPassPage" class="com.manauwar.dcms.action.MainAction">
+            <interceptor-ref name="authStack"></interceptor-ref>
+            <result name="success">/pages/SearchByPassport.jsp</result>
+            <result name="error">/pages/Error.jsp</result>
+        </action> 
+        <action name="SearchCandiPage" class="com.manauwar.dcms.action.MainAction">
+            <interceptor-ref name="authStack"></interceptor-ref>
+            <result name="success">/pages/SearchByCandidate.jsp</result>
+            <result name="error">/pages/Error.jsp</result>
+        </action> 
+         <action name="SaveStep1" class="com.manauwar.dcms.action.PersonalDetailAction">
+             <interceptor-ref name="authStack"></interceptor-ref>
+            <result name="success">/pages/MedicalExamination.jsp</result>
+            <result name="input">/pages/PersonalDetail.jsp</result>
+            <result name="error">/pages/Error.jsp</result>
+        </action>
+        <action name="SaveStep2" class="com.manauwar.dcms.action.MedicalExaminationAction">
+            <interceptor-ref name="authStack"></interceptor-ref>
+            <result name="success">/pages/LaboratoryInvestigation.jsp</result>
+            <result name="input">/pages/MedicalExamination.jsp</result>
+            <result name="error">/pages/Error.jsp</result>
+        </action>
+        <action name="SaveStep3" class="com.manauwar.dcms.action.LaboratoryInvestigationAction">
+            <interceptor-ref name="authStack"></interceptor-ref>
+            <result name="success">/pages/MainPage.jsp</result>
+            <result name="input">/pages/LaboratoryInvestigation.jsp</result>
+            <result name="error">/pages/Error.jsp</result>
+        </action>
+      <action name="goToMedicalExamination" class="com.manauwar.dcms.action.LaboratoryInvestigationAction">
+          <interceptor-ref name="authStack"></interceptor-ref>
+            <result name="success">/pages/MedicalExamination.jsp</result>
+            <result name="error">/pages/Error.jsp</result>
+        </action> 
+        
+        <action name="goToPersonalDetail" class="com.manauwar.dcms.action.MedicalExaminationAction">
+            <interceptor-ref name="authStack"></interceptor-ref>
+            <result name="success">/pages/PersonalDetail.jsp</result>
+            <result name="error">/pages/Error.jsp</result>
+        </action> 
+       
+       <action name="Logout" class="com.manauwar.dcms.action.LoginAction">
+            <result name="success">/pages/Login.jsp</result>
+        </action>
+        
+        <action name="SearchByPassportNo" class="com.manauwar.dcms.action.MainAction">
+            <interceptor-ref name="authStack"></interceptor-ref>
+            <result name="success">/pages/SearchByPassport.jsp</result>
+            <result name="error">/pages/Error.jsp</result>
+        </action> 
+        
+        <action name="SearchByCandidateName" class="com.manauwar.dcms.action.MainAction">
+            <interceptor-ref name="authStack"></interceptor-ref>
+            <result name="success">/pages/SearchByCandidate.jsp</result>
+            <result name="error">/pages/Error.jsp</result>
+        </action> 
+        
+        <action name="GoToMainPage" class="com.manauwar.dcms.action.MainAction">
+            <interceptor-ref name="authStack"></interceptor-ref>
+            <result name="success">/pages/MainPage.jsp</result>
+            <result name="error">/pages/Error.jsp</result>
+        </action> 
+       
+       <action name="viewPerDet" method="viewPerDet" class="com.manauwar.dcms.action.PersonalDetailAction">
+            <result name="success">/pages/PersonalDetail.jsp</result>
+            <result name="error">/pages/Error.jsp</result>
+        </action> 
+        
+     <!--   <action name="Print" method="Print" class="Administration.InstitutionAction">
+            <result name="success" type="stream">
+                <param name="contentType">application/pdf</param>
+                <param name="inputName">inputStream</param>
+                <param name="bufferSize">1024</param>
+            </result>
+            <result name="error">/pages/Error.jsp</result>
+        </action>   -->
+        
+    </package>
+</struts>

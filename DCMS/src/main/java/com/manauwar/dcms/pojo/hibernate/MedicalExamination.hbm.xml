@@ -1,0 +1,66 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 16 Apr, 2014 12:57:57 PM by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+    <class name="com.manauwar.dcms.pojo.hibernate.MedicalExamination" table="medical_examination" catalog="lifecare">
+        <id name="medicalExaminationId" type="java.lang.Integer">
+            <column name="MedicalExaminationId" />
+            <generator class="identity" />
+        </id>
+        <many-to-one name="personalDetail" class="com.manauwar.dcms.pojo.hibernate.PersonalDetail" fetch="select">
+            <column name="FK_PersonalDetailId" not-null="true" />
+        </many-to-one>
+        <property name="visionRightEye" type="string">
+            <column name="VisionRightEye" length="10" not-null="true" />
+        </property>
+        <property name="visionLeftEye" type="string">
+            <column name="VisionLeftEye" length="10" not-null="true" />
+        </property>
+        <property name="otherRightEye" type="string">
+            <column name="OtherRightEye" length="10" not-null="true" />
+        </property>
+        <property name="otherLeftEye" type="string">
+            <column name="OtherLeftEye" length="10" not-null="true" />
+        </property>
+        <property name="rightEar" type="string">
+            <column name="RightEar" length="10" not-null="true" />
+        </property>
+        <property name="leftEar" type="string">
+            <column name="LeftEar" length="10" not-null="true" />
+        </property>
+        <property name="hernia" type="string">
+            <column name="Hernia" length="30" not-null="true" />
+        </property>
+        <property name="varicoseVeins" type="string">
+            <column name="VaricoseVeins" length="30" not-null="true" />
+        </property>
+        <property name="extremeties" type="string">
+            <column name="Extremeties" length="30" not-null="true" />
+        </property>
+        <property name="skin" type="string">
+            <column name="Skin" length="30" not-null="true" />
+        </property>
+        <property name="hydrocele" type="string">
+            <column name="Hydrocele" length="30" not-null="true" />
+        </property>
+        <property name="bloodPressure" type="string">
+            <column name="BloodPressure" length="30" not-null="true" />
+        </property>
+        <property name="heart" type="string">
+            <column name="Heart" length="30" not-null="true" />
+        </property>
+        <property name="lungs" type="string">
+            <column name="Lungs" length="30" not-null="true" />
+        </property>
+        <property name="abdomen" type="string">
+            <column name="Abdomen" length="30" not-null="true" />
+        </property>
+        <property name="vrdl" type="string">
+            <column name="VRDL" length="30" not-null="true" />
+        </property>
+        <property name="tpha" type="string">
+            <column name="TPHA" length="30" />
+        </property>
+    </class>
+</hibernate-mapping>

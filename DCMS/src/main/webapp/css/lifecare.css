@@ -1,0 +1,60 @@
+
+body  {
+
+    font: 100% Verdana, Arial, Helvetica, sans-serif;
+    background: #FFFFFF;
+    margin: 0;              
+    padding: 0;
+    text-align: center;     
+    color: darkblue;
+    font-style: normal;
+    font-family: initial;
+}
+
+.pageSubHeading {
+    text-align: left;
+    font: 16px/24px Calibri, Verdana, Arial;
+    color: #0000ff;
+    margin-left: 1%;
+
+}
+
+.oneColElsLtHdr #container {
+
+    width: 800px;                 
+    background: #ccccff;
+    margin-left: 20%;
+    margin-right: 20%;
+    margin-top: 2%;
+    margin-bottom: 5%;
+    border: 1px solid #000000;
+    text-align: left;           
+    border-radius:10px;
+}
+
+.oneColElsLtHdr #mainContent {
+
+
+    margin-left: 0;
+    margin-right: 0;              
+    text-align: left;   
+}
+.labelDot {
+    color: #ccccff;
+}
+
+.odd {
+    background-color:  #ffffff;
+    text-align: left;
+    padding: 3px;
+    font: 11px tahoma,verdana,sans-serif;
+    color: black;
+}
+
+.even {
+    background-color: #33ccff;
+    text-align: left;
+    padding: 3px;
+    font: 11px tahoma,verdana,sans-serif;
+    color: black;
+}

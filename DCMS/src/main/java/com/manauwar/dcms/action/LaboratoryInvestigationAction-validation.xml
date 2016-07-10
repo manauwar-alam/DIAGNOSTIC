@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE validators PUBLIC '-//OpenSymphony Group//XWork Validator 1.0.2//EN'
+'http://www.opensymphony.com/xwork/xwork-validator-1.0.2.dtd'>
+
+<validators>
+    <field name="labInvest.urineSugar">
+        <field-validator type="requiredstring">
+            <param name="trim">true</param>
+            <message>Please enter sugar field value</message>
+        </field-validator>
+    </field>
+    
+    <field name="labInvest.urineAlbumn">
+        <field-validator type="requiredstring">
+            <param name="trim">true</param>
+            <message>Please enter urine field value</message>
+        </field-validator>
+    </field>
+    
+    <field name="labInvest.urineBilharziasis">
+        <field-validator type="requiredstring">
+            <param name="trim">true</param>
+            <message>Please enter Bilharziasis field value</message>
+        </field-validator>
+    </field>
+    
+    <field name="labInvest.urineOthers">
+        <field-validator type="requiredstring">
+            <param name="trim">true</param>
+            <message>Please enter urine others field value</message>
+        </field-validator>
+    </field>
+    
+    <field name="labInvest.stoolHelminthes">
+        <field-validator type="requiredstring">
+            <param name="trim">true</param>
+            <message>Please enter HELMINTHES field value</message>
+        </field-validator>
+    </field>
+    
+    <field name="labInvest.stoolBilharziasis">
+        <field-validator type="requiredstring">
+            <param name="trim">true</param>
+            <message>Please enter Bilharziasis field value</message>
+        </field-validator>
+    </field>
+    
+    <field name="labInvest.stoolSalmonela">
+        <field-validator type="requiredstring">
+            <param name="trim">true</param>
+            <message>Please enter Salmonela field value</message>
+        </field-validator>
+    </field>
+    
+    <field name="labInvest.stoolShigella">
+        <field-validator type="requiredstring">
+            <param name="trim">true</param>
+            <message>Please enter Shigella field value</message>
+        </field-validator>
+    </field>
+    
+    <field name="labInvest.stoolVcholera">
+        <field-validator type="requiredstring">
+            <param name="trim">true</param>
+            <message>Please enter V. CHOLERA field value</message>
+        </field-validator>
+    </field>
+    
+    <field name="labInvest.stoolOthers">
+        <field-validator type="requiredstring">
+            <param name="trim">true</param>
+            <message>Please enter Others field value</message>
+        </field-validator>
+    </field>
+    
+    <field name="labInvest.bloodHemoglobin">
+        <field-validator type="requiredstring">
+            <param name="trim">true</param>
+            <message>Please enter Hemoglobin field value</message>
+        </field-validator>
+    </field>
+    
+    <field name="labInvest.bloodMalariaFilm">
+        <field-validator type="requiredstring">
+            <param name="trim">true</param>
+            <message>Please enter Malaria Film field value</message>
+        </field-validator>
+    </field>
+    
+    <field name="labInvest.serologyHiv">
+        <field-validator type="requiredstring">
+            <param name="trim">true</param>
+            <message>Please enter HIV field value</message>
+        </field-validator>
+    </field>
+    
+    <field name="labInvest.serologyHbag">
+        <field-validator type="requiredstring">
+            <param name="trim">true</param>
+            <message>Please enter HB$Ag field value</message>
+        </field-validator>
+    </field>
+    
+    <field name="labInvest.serologyAntiHcv">
+        <field-validator type="requiredstring">
+            <param name="trim">true</param>
+            <message>Please enter AntiHCV field value</message>
+        </field-validator>
+    </field>
+    
+    <field name="labInvest.serologyLft">
+        <field-validator type="requiredstring">
+            <param name="trim">true</param>
+            <message>Please enter L.F.T. field value</message>
+        </field-validator>
+    </field>
+    
+    <field name="labInvest.serologyUrea">
+        <field-validator type="requiredstring">
+            <param name="trim">true</param>
+            <message>Please enter UREA field value</message>
+        </field-validator>
+    </field>
+    
+    <field name="labInvest.serologyCreatinine">
+        <field-validator type="requiredstring">
+            <param name="trim">true</param>
+            <message>Please enter Creatinine field value</message>
+        </field-validator>
+    </field>
+    
+    <field name="labInvest.serologyBloodSugarR">
+        <field-validator type="requiredstring">
+            <param name="trim">true</param>
+            <message>Please enter BLOOD SUGAR field value</message>
+        </field-validator>
+    </field>
+    
+    <field name="labInvest.serologyBloodGroup">
+        <field-validator type="requiredstring">
+            <param name="trim">true</param>
+            <message>Please enter BLOOD GROUP field value</message>
+        </field-validator>
+    </field>
+    
+    <field name="labInvest.pregnencyTest">
+        <field-validator type="required">
+           
+            <message>Please select any field</message>
+        </field-validator>
+    </field>
+    
+    <field name="labInvest.lmpdate">
+        <field-validator type="required">
+           
+            <message>Please enter LMP Date field value</message>
+        </field-validator>
+    </field>
+    
+    
+    <field name="labInvest.chestXray">
+        <field-validator type="requiredstring">
+            <param name="trim">true</param>
+            <message>Please enter CHEST X-RAY field value</message>
+        </field-validator>
+    </field>
+   
+</validators>

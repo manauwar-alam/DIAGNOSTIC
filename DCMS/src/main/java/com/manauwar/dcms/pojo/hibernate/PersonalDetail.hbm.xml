@@ -1,0 +1,81 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 16 Apr, 2014 12:57:57 PM by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+    <class name="com.manauwar.dcms.pojo.hibernate.PersonalDetail" table="personal_detail" catalog="lifecare">
+        <id name="personalDetailId" type="java.lang.Integer">
+            <column name="PersonalDetailId" />
+            <generator class="identity" />
+        </id>
+        <many-to-one name="users" class="com.manauwar.dcms.pojo.hibernate.Users" fetch="select">
+            <column name="FK_UserId" not-null="true" />
+        </many-to-one>
+        <property name="passportNo" type="string">
+            <column name="PassportNo" length="45" not-null="true" unique="true" />
+        </property>
+        <property name="dateOfIssue" type="date">
+            <column name="DateOfIssue" length="10" not-null="true" />
+        </property>
+        <property name="placeOfIssue" type="string">
+            <column name="PlaceOfIssue" length="45" not-null="true" />
+        </property>
+        <property name="postAppliedFor" type="string">
+            <column name="PostAppliedFor" length="45" not-null="true" />
+        </property>
+        <property name="height" type="string">
+            <column name="Height" length="10" not-null="true" />
+        </property>
+        <property name="weight" type="string">
+            <column name="Weight" length="10" not-null="true" />
+        </property>
+        <property name="maritalStatus" type="char">
+            <column name="MaritalStatus" length="1" not-null="true" />
+        </property>
+        <property name="sex" type="char">
+            <column name="Sex" length="1" not-null="true" />
+        </property>
+        <property name="nationality" type="string">
+            <column name="Nationality" length="20" not-null="true" />
+        </property>
+        <property name="dateOfBirth" type="date">
+            <column name="DateOfBirth" length="10" not-null="true" />
+        </property>
+        <property name="ageInYears" type="int">
+            <column name="AgeInYears" not-null="true" />
+        </property>
+        <property name="certificateNo" type="string">
+            <column name="CertificateNo" length="100" not-null="true" unique="true" />
+        </property>
+        <property name="nameOfCandidate" type="string">
+            <column name="NameOfCandidate" length="100" not-null="true" />
+        </property>
+        <property name="referenceNo" type="string">
+            <column name="ReferenceNo" length="50" not-null="true" />
+        </property>
+        <property name="examDate" type="date">
+            <column name="ExamDate" length="10" not-null="true" />
+        </property>
+        <property name="commonRemarks" type="string">
+            <column name="CommonRemarks" length="60" />
+        </property>
+        <property name="commonResult" type="string">
+            <column name="CommonResult" length="30" />
+        </property>
+        <property name="commonReason" type="string">
+            <column name="CommonReason" length="100" />
+        </property>
+        <set name="laboratoryInvestigations" inverse="true">
+            <key>
+                <column name="FK_PersonalDetailId" not-null="true" />
+            </key>
+            <one-to-many class="com.manauwar.dcms.pojo.hibernate.LaboratoryInvestigation" />
+        </set>
+        <set name="medicalExaminations" inverse="true">
+            <key>
+                <column name="FK_PersonalDetailId" not-null="true" />
+            </key>
+            <one-to-many class="com.manauwar.dcms.pojo.hibernate.MedicalExamination" />
+        </set>
+    </class>
+</hibernate-mapping>
